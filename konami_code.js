@@ -10,7 +10,7 @@ function init() {
   test.addEventListener('keydown', function onKeyDownHandler(e) {
     const key = parseInt(e.detail || e.which);
     if(key === 16) {
-      return e.preventDefault()
+      return key.preventDefault()
     }
 
     if(key === alphabet[index]){
