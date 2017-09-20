@@ -7,25 +7,25 @@ function init() {
 
   let index =0;
   const test = document.querySelector('body')
-  test.addEventListener('keydown', onKeyDownHandler)
+  test.addEventListener('keydown', function onKeyDownHandler(e) {
+    const key = parseInt(e.detail || e.which);
+    if(key === 16) {
+      return e.preventDefault()
+    }
 
-}
+    if(key === alphabet[index]){
+      index++;
 
-function onKeyDownHandler(e) {
-  const key = parseInt(e.detail || e.which);
-  if(key === 16) {
-    return e.preventDefault()
-  }
+      if(index === alphabet.length) {
+        alert("Hurray!");
 
-  if(key === alphabet[index]){
-    index++;
-
-    if(index === alphabet.length) {
-      alert("Hurray!");
-
+        index = 0;
+      }
+    } else {
       index = 0;
     }
-  } else {
-    index = 0;
-  }
+  })
+
 }
+
+
