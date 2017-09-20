@@ -16,7 +16,7 @@ function onKeyDownHandler(e) {
   if(key === 16) {
     return e.preventDefault()
   }
-  
+
   if(key === alphabet[index]){
     index++;
 
