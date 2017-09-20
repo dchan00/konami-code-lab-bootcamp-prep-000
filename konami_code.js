@@ -11,10 +11,10 @@ function init() {
     const key = parseInt(e.detail || e.which);
     console.log(key)
 
-    if(key === alphabet[index]){
+    if(key === code[index]){
       index++;
 
-      if(index === alphabet.length) {
+      if(index === code.length) {
         alert("Hurray!");
 
         index = 0;
